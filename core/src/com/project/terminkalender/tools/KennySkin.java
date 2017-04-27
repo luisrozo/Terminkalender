@@ -312,6 +312,7 @@ public class KennySkin extends Skin {
         add("emptyTextButtonDescription", emptyTextButtonDescriptionStyle);
         
         addRegions(greenAtlas);
+        addRegions(orangeAtlas);
         
         final TextButtonStyle greenTextButtonStyle = new TextButtonStyle(getDrawable("button_04_green"), 
 																	     getDrawable("button_02_green"), 
@@ -337,8 +338,9 @@ public class KennySkin extends Skin {
         add("textButtonLargeGreen", textButtonStyleLargeGreen);
         add("windowDescriptionGreen", windowDescriptionGreenStyle);
         add("fullTextButtonDescription", fullTextButtonDescriptionStyle);
+        add("textButtonTaskGreen", fullTextButtonDescriptionStyle);
         
-        addRegions(orangeAtlas);
+        //addRegions(orangeAtlas);
         
         final TextButtonStyle orangeTextButtonStyle = new TextButtonStyle(getDrawable("button_04_orange"), 
 			     														 getDrawable("button_02_orange"), 
@@ -357,10 +359,16 @@ public class KennySkin extends Skin {
 					  													getDrawable("button_01_orange"), 
 					  													getDrawable("button_01_orange"), 
 					  													getFont("FontMed"));
+		
+        final TextButtonStyle fullTextButtonDescriptionOrangeStyle = new TextButtonStyle(getDrawable("button_01_orange"), 
+				   										getDrawable("button_01_orange"), 
+				   										getDrawable("button_01_orange"), 
+				   										getFont("FontMed"));
         
         add("orangeTextButton", orangeTextButtonStyle);
         add("orangeImageButtonReconnect", orangeImageButtonStyleReconnect);
         add("chatUserOrange", chatUserStyleOrange);
+        add("fullTextButtonDescriptionOrange", fullTextButtonDescriptionOrangeStyle);
         
         addRegions(yellowAtlas);
         
