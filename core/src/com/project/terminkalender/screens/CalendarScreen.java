@@ -59,7 +59,7 @@ public class CalendarScreen extends AbstractScreen {
 			tasks.add(slot.getTask());
 		}
 		changeToChatButton = new TextButton("Chat", Resources.skin);
-		validateButton = new TextButton("Aktivität beendet!", Resources.skin, "greenTextButton");
+		validateButton = new TextButton("AktivitÃ¤t beendet!", Resources.skin, "greenTextButton");
 		interactionButton = new ImageButton(Resources.skin, "interactionButton");
 		guideButton = new ImageButton(Resources.skin, "guideButton");
 		interactionDialog = new InteractionsDialog("", Resources.skin);
@@ -171,7 +171,8 @@ public class CalendarScreen extends AbstractScreen {
 				}
 			}
 		}
-	}	
+	}
+	
 	public boolean setTaskInSlotEmpty(TaskCalendar task) {
 		Array<Slot> tasksTableSlots = tasktableActor.getTasktable().getSlots();
 		for(int taskTableIndex = 0; taskTableIndex < tasksTableSlots.size; ++taskTableIndex) {
@@ -207,7 +208,7 @@ public class CalendarScreen extends AbstractScreen {
 		
 		if(closeGame) {
 			AppMain.setNewScreen(AppMain.loginScreen);
-			Resources.warningDialog.show("Spiel momentan nicht verfügbar", AppMain.loginGamesScreen.getStage());
+			Resources.warningDialog.show("Spiel momentan nicht verfÃ¼gbar", AppMain.loginGamesScreen.getStage());
 			ChatScreen chatScreen = (ChatScreen) AppMain.chatScreen;
 			chatScreen.closeGameFalse();
 			closeGame = false;
