@@ -25,7 +25,7 @@ public class SlotActor extends TextButton implements SlotListener {
 		}
 		else {
 			setText(slot.getTask().getShortDescription());
-			setStyle(Resources.skin.get("fullTextButtonDescription", TextButtonStyle.class));
+			setStyle(Resources.skin.get("fullTextButtonDescriptionOrange", TextButtonStyle.class));
 		}
 	}
 
