@@ -32,7 +32,7 @@ public class SlotSource extends Source {
 			sourceSlot.setEmpty();
 			payload.setObject(payloadSlot);
 			
-			TextButton button = new TextButton(payloadSlot.getTask().getShortDescription(), Resources.skin, "fullTextButtonDescription");
+			TextButton button = new TextButton(payloadSlot.getTask().getShortDescription(), Resources.skin, "fullTextButtonDescriptionOrange");
 			button.setWidth(CalendarScreen.WIDTHTASK);
 			button.setHeight(CalendarScreen.HEIGHTTASK);
 
