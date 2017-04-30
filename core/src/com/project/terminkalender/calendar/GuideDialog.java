@@ -14,14 +14,14 @@ public class GuideDialog extends DialogActor {
 
 	public GuideDialog(String title, Skin skin) {
 		super(title, skin);
-		
+
 		center();
 		setMovable(false);
 		setResizable(false);
 		setModal(true);
 		pad(20);
 		padTop(30);
-		
+
 		Table table = new Table(skin);
 		ScrollPane scroll = new ScrollPane(table, skin, "window");
 		Label guide1Label = new Label("1. Schau, was du machen kannst!", skin);
@@ -42,7 +42,7 @@ public class GuideDialog extends DialogActor {
 		Label guide8Label = new Label("8. Ergänz deinen Terminkalender!", skin);
 		Image image8 = new Image(Resources.assets.get("guide/9.png", Texture.class));
 		TextButton acceptButton = new TextButton("OK", skin);
-		
+
 		table.add(guide1Label).padBottom(20).row();
 		table.add(image1).width(image1.getWidth() / 2).height(image1.getHeight() / 2).padBottom(20).row();
 		table.add(guide2Label).padBottom(20).row();
@@ -60,14 +60,14 @@ public class GuideDialog extends DialogActor {
 		table.add(image7).width(image1.getWidth() / 2).height(image1.getHeight() / 2).padBottom(20).row();
 		table.add(guide8Label).padBottom(20).row();
 		table.add(image8).width(image1.getWidth() / 2).height(image1.getHeight() / 2).padBottom(20).row();
-		
+
 		scroll.setFadeScrollBars(false);
-		
+
 		getButtonTable().defaults().width(175).height(100);
 		getContentTable().padTop(20);
 		getContentTable().padBottom(5);
 		getContentTable().add(scroll).width(600).height(350);
 		button(acceptButton);
 	}
-	
+
 }

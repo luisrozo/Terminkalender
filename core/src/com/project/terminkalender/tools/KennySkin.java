@@ -314,9 +314,9 @@ public class KennySkin extends Skin {
         addRegions(greenAtlas);
         addRegions(orangeAtlas);
         
-        final TextButtonStyle greenTextButtonStyle = new TextButtonStyle(getDrawable("button_04_green"), 
-																	     getDrawable("button_02_green"), 
-																	     getDrawable("button_04_green"), 
+        final TextButtonStyle greenTextButtonStyle = new TextButtonStyle(getDrawable("button_04_green"),
+																	     getDrawable("button_02_green"),
+																	     getDrawable("button_04_green"),
 																	     getFont("FontMed"));
         
         final TextButtonStyle textButtonStyleLargeGreen = new TextButtonStyle(getDrawable("button_04_green"), 

@@ -32,7 +32,7 @@ public class User {
 		else if(name.contains(TeacherWebSockets.DATASPLIT) || name.contains(TeacherWebSockets.POINTSPLIT) || 
 				name.contains(TeacherWebSockets.TASKSPLIT) || password.contains(TeacherWebSockets.DATASPLIT) || password.contains(TeacherWebSockets.POINTSPLIT) || 
 				password.contains(TeacherWebSockets.TASKSPLIT)) {
-			Resources.warningDialog.show("you musn't use ',', ';' or ':'", AppMain.loginGamesScreen.getStage());
+			Resources.warningDialog.show("Bitte nicht ',', ';' or ':' schreiben!", AppMain.loginGamesScreen.getStage());
 		}
 		else {
 			this.name = name.toLowerCase();

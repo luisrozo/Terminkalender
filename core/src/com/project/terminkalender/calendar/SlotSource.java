@@ -64,5 +64,6 @@ public class SlotSource extends Source {
 		} else {
 			sourceSlot.copy(payloadSlot.isEmpty(), payloadSlot.getTask());
 		}
+		CalendarScreen.validateButton.setStyle(Resources.skin.get("orangeTextButton", TextButton.TextButtonStyle.class));
 	}
 }

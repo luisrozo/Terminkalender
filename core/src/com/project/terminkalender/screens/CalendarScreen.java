@@ -37,7 +37,7 @@ public class CalendarScreen extends AbstractScreen {
 	private TimetableActor timetableActor;
 	private TasktableActor tasktableActor;
 	private Array<TaskCalendar> tasks;
-	private TextButton changeToChatButton, validateButton;
+	static public TextButton changeToChatButton, validateButton;
 	private ImageButton guideButton, interactionButton;
 	private DialogActor interactionDialog, guideDialog;
 	private ReconnectButton reconnectButton;
@@ -59,7 +59,7 @@ public class CalendarScreen extends AbstractScreen {
 			tasks.add(slot.getTask());
 		}
 		changeToChatButton = new TextButton("Chat", Resources.skin);
-		validateButton = new TextButton("AktivitÃ¤t beendet!", Resources.skin, "greenTextButton");
+		validateButton = new TextButton("Aktivität beendet!", Resources.skin, "orangeTextButton");
 		interactionButton = new ImageButton(Resources.skin, "interactionButton");
 		guideButton = new ImageButton(Resources.skin, "guideButton");
 		interactionDialog = new InteractionsDialog("", Resources.skin);
@@ -93,6 +93,7 @@ public class CalendarScreen extends AbstractScreen {
 
 			@Override 
 			public void clicked(InputEvent event, float x, float y){
+				validateButton.setStyle(Resources.skin.get("greenTextButton", TextButtonStyle.class));
 				AppMain.webSockets.validateCalendarData();
 			}
 		});
@@ -208,7 +209,7 @@ public class CalendarScreen extends AbstractScreen {
 		
 		if(closeGame) {
 			AppMain.setNewScreen(AppMain.loginScreen);
-			Resources.warningDialog.show("Spiel momentan nicht verfÃ¼gbar", AppMain.loginGamesScreen.getStage());
+			Resources.warningDialog.show("Spiel momentan nicht verfügbar", AppMain.loginGamesScreen.getStage());
 			ChatScreen chatScreen = (ChatScreen) AppMain.chatScreen;
 			chatScreen.closeGameFalse();
 			closeGame = false;
